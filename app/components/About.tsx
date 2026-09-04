@@ -3,6 +3,7 @@ import { ArrowUpRight, HeartHandshake, ShieldCheck, Sparkles } from "lucide-reac
  function About() {
   return (
     <section
+    id="om-os"
       className="relative overflow-hidden px-6 py-24 md:px-12"
       style={{ backgroundColor: "#F6F9F8" }}
     >
@@ -65,7 +66,7 @@ import { ArrowUpRight, HeartHandshake, ShieldCheck, Sparkles } from "lucide-reac
             alt="Команда Nordklar за роботою"
             className="h-[420px] w-full rounded-3xl object-cover"
           />
- s
+ 
         </div>
       </div>
     </section>

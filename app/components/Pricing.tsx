@@ -37,7 +37,7 @@ const prices = [
 export default function Pricing() {
   return (
     <section className="px-6 py-24 md:px-12" style={{ backgroundColor: "#FFFFFF" }}>
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <div className="max-w-xl">
           <h2
             className="text-3xl font-semibold leading-tight tracking-tight md:text-4xl"

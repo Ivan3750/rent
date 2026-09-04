@@ -18,23 +18,10 @@ function Footer() {
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
               En familievirksomhed, der tilbyder rengøring af boliger, kontorer og erhvervslokaler
-              i Aarhus og omegn.
+              i Horsens og omegn.
             </p>
 
-            <div className="mt-6 flex items-center gap-3">
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20"
-              >
-               </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20"
-              >
-               </a>
-            </div>
+           
           </div>
 
           {/* Menu */}

@@ -1,86 +1,116 @@
-function ServiceCard({ title, desc }) {
-  return (
-    <div
-      className="flex h-64 flex-col justify-between rounded-3xl p-6"
-      style={{ backgroundColor: "#EFF7FF" }}
-    >
-      <p
-        className="text-xl font-extrabold leading-snug md:text-2xl"
-        style={{ color: "#17221F" }}
-      >
-        {title}
-      </p>
-      <p className="text-sm leading-relaxed" style={{ color: "#617078" }}>
-        {desc}
-      </p>
-    </div>
-  );
-}
+import { Home, Sparkles, Building2, Droplets, Wrench, Armchair } from "lucide-react";
 
-function Photo({ src, alt }) {
+const SECTION_BG = "#EFF7FF";
+const TEXT_DARK = "#17221F";
+const TEXT_MUTED = "#617078";
+const ACCENT = "#1C62D9";
+const BORDER = "rgba(23, 34, 31, 0.1)";
+
+const services = [
+  {
+    icon: Home,
+    number: "01",
+    title: "Rengøring af hjem",
+    text: "Faste eller enkeltstående besøg, der tilpasser sig din hverdag — ikke omvendt.",
+  },
+  {
+    icon: Sparkles,
+    number: "02",
+    title: "Hovedrengøring",
+    text: "Dybderengøring af hvert hjørne, inklusive de steder den daglige rengøring ikke når.",
+  },
+  {
+    icon: Building2,
+    number: "03",
+    title: "Kontorrengøring",
+    text: "Rene fælleslokaler og skriveborde for et bedre indtryk og arbejdsmiljø.",
+  },
+  {
+    icon: Droplets,
+    number: "04",
+    title: "Vinduespudsning",
+    text: "Vinduer og glasdøre pudset uden striber, indefra og udefra.",
+  },
+  {
+    icon: Wrench,
+    number: "05",
+    title: "Rengøring efter renovering",
+    text: "Byggestøv og materialerester fjernes, så boligen er klar til brug med det samme.",
+  },
+  {
+    icon: Armchair,
+    number: "06",
+    title: "Tæppe- og møbelrengøring",
+    text: "Dybderens af sofaer og tæpper, der fjerner pletter og lugt uden at slide på materialet.",
+  },
+];
+
+function ArrowIcon() {
   return (
-    <div className="h-64 overflow-hidden rounded-3xl">
-      {/* Replace with your own photo */}
-      <img src={src} alt={alt} className="h-full w-full object-cover" />
-    </div>
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+      <path
+        d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12"
+        stroke="#FFFFFF"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 
 export default function Services() {
   return (
-    <section className="px-6 py-24 md:px-12" style={{ backgroundColor: "#F6F9F8" }}>
+    <section id="services" className="px-6 py-24 sm:px-10 lg:py-32" style={{ backgroundColor: SECTION_BG }}>
       <div className="mx-auto max-w-6xl">
-        <div className="max-w-xl">
-          <h2
-            className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
-            style={{ color: "#17221F" }}
-          >
-            Послуги, які ми <em className="font-serif italic font-medium">виконуємо</em>
-          </h2>
-          <p className="mt-4 text-base leading-relaxed" style={{ color: "#617078" }}>
-            Короткий огляд напрямків роботи — детальні описи й ціни зовсім скоро.
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-wide" style={{ color: ACCENT }}>
+              02 — Ydelser
+            </p>
+            <h2 className="mt-5 text-4xl font-extrabold leading-[1.05] sm:text-6xl" style={{ color: TEXT_DARK }}>
+              Rent. Enkelt.
+              <br />
+              <span className="font-serif text-3xl font-normal italic sm:text-5xl">
+                Sådan gør vi det.
+              </span>
+            </h2>
+          </div>
+          <p className="max-w-sm text-base leading-7" style={{ color: TEXT_MUTED }}>
+            Vælg det format, der passer dig — detaljer og et tidspunkt aftaler vi personligt.
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-          {/* Column 1: photo → text */}
-          <div className="flex flex-col gap-4">
-            <Photo src="/service-photo-1.jpg" alt="Прибирання квартир і будинків" />
-            <ServiceCard
-              title="Прибирання квартир і будинків"
-              desc="Регулярний догляд за домом, який завжди лишає простір свіжим."
-            />
-          </div>
-
-          {/* Column 2: text → photo */}
-          <div className="flex flex-col gap-4">
-            <ServiceCard
-              title="Генеральне прибирання"
-              desc="Глибоке очищення кожного кутка, включно з важкодоступними місцями."
-            />
-            <Photo src="/service-photo-2.jpg" alt="Генеральне прибирання" />
-          </div>
-
-          {/* Column 3: photo → text */}
-          <div className="flex flex-col gap-4">
-            <Photo src="/service-photo-3.jpg" alt="Офісне прибирання" />
-            <ServiceCard
-              title="Офісне прибирання"
-              desc="Чистота для команди та клієнтів щодня."
-            />
-          </div>
-
-          {/* Column 4: text → text */}
-          <div className="flex flex-col gap-4">
-            <ServiceCard
-              title="Миття вікон"
-              desc="Прозорість без розводів, зсередини й ззовні."
-            />
-            <ServiceCard
-              title="Прибирання після ремонту"
-              desc="Прибираємо будівельний пил і залишки матеріалів."
-            />
-          </div>
+        <div className="mt-16" style={{ borderTop: `1px solid ${BORDER}` }}>
+          {services.map(({ icon: Icon, number, title, text }) => (
+            <article
+              key={number}
+              className="group grid items-center gap-5 py-7 transition-colors md:grid-cols-[56px_72px_1fr_1fr_44px] md:py-8"
+              style={{ borderBottom: `1px solid ${BORDER}` }}
+            >
+              <span className="text-xs font-bold" style={{ color: TEXT_MUTED }}>
+                {number}
+              </span>
+              <span
+                className="grid size-12 place-items-center rounded-full bg-white transition-transform duration-300 group-hover:rotate-6"
+                style={{ color: ACCENT }}
+              >
+                <Icon size={22} />
+              </span>
+              <h3 className="text-xl font-bold sm:text-2xl" style={{ color: TEXT_DARK }}>
+                {title}
+              </h3>
+              <p className="max-w-md text-sm leading-6" style={{ color: TEXT_MUTED }}>
+                {text}
+              </p>
+              <span
+                className="hidden h-9 w-9 items-center justify-center rounded-full opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100 md:flex"
+                style={{ backgroundColor: ACCENT }}
+              >
+                <ArrowIcon />
+              </span>
+            </article>
+          ))}
         </div>
       </div>
     </section>

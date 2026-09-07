@@ -14,7 +14,7 @@ function Footer() {
               >
                 <Droplet size={16} className="text-white" fill="white" />
               </span>
-              <span className="text-lg font-extrabold text-white">Nordklar</span>
+              <span className="text-lg font-extrabold text-white">RenServ</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
               En familievirksomhed, der tilbyder rengøring af boliger, kontorer og erhvervslokaler
@@ -55,9 +55,9 @@ function Footer() {
 
         {/* Legal bar */}
         <div className="flex flex-col gap-3 border-t border-white/10 py-6 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Nordklar. Alle rettigheder forbeholdes.</p>
+          <p>© {new Date().getFullYear()} RenServ. Alle rettigheder forbeholdes.</p>
           {/* CVR ще не зареєстровано — заповніть після реєстрації бізнесу */}
-          <p>Nordklar (CVR: [заповнити]) · [юридична назва]</p>
+          <p>RenServ (CVR: [заповнити]) · [юридична назва]</p>
         </div>
       </div>
     </footer>

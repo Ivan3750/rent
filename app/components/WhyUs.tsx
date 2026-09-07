@@ -19,7 +19,7 @@ export function WhyUs() {
         <div className="max-w-2xl">
           <Eyebrow className="text-[#16A085]">Hvorfor os</Eyebrow>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
-            Derfor vælger kunderne Nordklar
+            Derfor vælger kunderne RenServ
           </h2>
         </div>
 

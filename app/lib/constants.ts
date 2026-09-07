@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import type { NavLink, PriceRow, Reason, Service } from "./types";
 
-export const COMPANY_NAME = "Nordklar";
-export const COMPANY_FULL_NAME = "Nordklar Rengøring ApS";
+export const COMPANY_NAME = "RenServ";
+export const COMPANY_FULL_NAME = "RenServ Rengøring ApS";
 export const PHONE = "+45 22 85 88 80";
 export const PHONE_HREF = "tel:+4522858880";
 export const EMAIL = "kontakt@nordklar.dk";

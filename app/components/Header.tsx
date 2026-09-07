@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { COMPANY_NAME, NAV_LINKS, PHONE, PHONE_HREF } from "../lib/constants";
-
+import logo from "../assets/RenServ.png";
 function MarkIcon() {
   return (
     <svg viewBox="0 0 24 24" className="size-4" fill="none">
@@ -47,9 +47,8 @@ export function Header() {
           ].join(" ")}
         >
           <a href="#top" className="flex items-center gap-2.5">
-            <span className="flex size-9 items-center justify-center rounded-xl bg-[#1C62D9]">
-              <MarkIcon />
-            </span>
+              <img src={logo.src} alt={COMPANY_NAME} className="w-16 h-16" />
+            
             <span className="text-lg font-semibold tracking-tight text-[#17221F]">
               {COMPANY_NAME}
             </span>

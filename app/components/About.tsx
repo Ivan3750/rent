@@ -27,7 +27,7 @@ import { ArrowUpRight, HeartHandshake, ShieldCheck, Sparkles } from "lucide-reac
 
           <div className="mt-6 space-y-4 text-base leading-relaxed" style={{ color: "#617078" }}>
             <p>
-              Nordklar — det er et familiebedrift: vi med mor og far rengører huse og kontorbygninger
+              RenServ — det er et familiebedrift: vi med mor og far rengører huse og kontorbygninger
               over hele Danmark med egne hænder, ikke via tilfældige underleverandører.
               Hvert bestilling er vores personlige rygte, så vi tager det alvorligt,
               som om vi rengjorde vores eget hjem.
@@ -63,7 +63,7 @@ import { ArrowUpRight, HeartHandshake, ShieldCheck, Sparkles } from "lucide-reac
           {/* Replace src with your own photo */}
           <img
             src="/about-photo.jpg"
-            alt="Команда Nordklar за роботою"
+            alt="Команда RenServ за роботою"
             className="h-[420px] w-full rounded-3xl object-cover"
           />
  

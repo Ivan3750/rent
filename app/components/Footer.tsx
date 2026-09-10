@@ -1,5 +1,11 @@
 import { Droplet, Phone, Mail } from "lucide-react";
 
+import Link from "next/link";
+
+const legalLinks = [
+  { href: "/privacy", label: "Privatlivspolitik" },
+  { href: "/terms", label: "Handelsbetingelser" },
+];
 function Footer() {
   return (
     <footer className="px-6 pt-16 md:px-12" style={{ backgroundColor: "#164FAF" }}>
@@ -53,7 +59,17 @@ function Footer() {
         {/* Legal bar */}
         <div className="flex flex-col gap-3 border-t border-white/10 py-6 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} RenServ. Alle rettigheder forbeholdes.</p>
- 
+ {legalLinks.map(({ href, label }) => (
+               <span key={href}>
+                 
+                 <Link
+                   href={href}
+                   className="hover:text-[#5a5a5a] transition-colors"
+                 >
+                   {label}
+                 </Link>
+               </span>
+             ))}
         </div>
       </div>
     </footer>

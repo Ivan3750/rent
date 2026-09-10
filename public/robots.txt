@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.renserv.dk
+
+# Sitemaps
+Sitemap: https://www.renserv.dk/sitemap.xml

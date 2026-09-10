@@ -17,6 +17,14 @@ a{
 }
 a:hover{
   scale: 0.998;
+  cursor: pointer;
+}
+button{
+  transition: 0.3s;
+}
+button:hover{
+  scale: 0.998;
+  cursor: pointer;
 }
 
 body {

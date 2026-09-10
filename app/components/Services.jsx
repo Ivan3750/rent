@@ -11,7 +11,7 @@ const services = [
     icon: Home,
     number: "01",
     title: "Rengøring af hjem",
-    text: "Faste eller enkeltstående besøg, der tilpasser sig din hverdag — ikke omvendt.",
+    text: "Faste eller enkeltstående besøg, der tilpasser sig din hverdag - ikke omvendt.",
   },
   {
     icon: Sparkles,
@@ -26,23 +26,12 @@ const services = [
     text: "Rene fælleslokaler og skriveborde for et bedre indtryk og arbejdsmiljø.",
   },
   {
-    icon: Droplets,
-    number: "04",
-    title: "Vinduespudsning",
-    text: "Vinduer og glasdøre pudset uden striber, indefra og udefra.",
-  },
-  {
     icon: Wrench,
-    number: "05",
+    number: "04",
     title: "Rengøring efter renovering",
     text: "Byggestøv og materialerester fjernes, så boligen er klar til brug med det samme.",
   },
-  {
-    icon: Armchair,
-    number: "06",
-    title: "Tæppe- og møbelrengøring",
-    text: "Dybderens af sofaer og tæpper, der fjerner pletter og lugt uden at slide på materialet.",
-  },
+ 
 ];
 
 function ArrowIcon() {
@@ -61,12 +50,12 @@ function ArrowIcon() {
 
 export default function Services() {
   return (
-    <section id="services" className="px-6 py-24 sm:px-10 lg:py-32" style={{ backgroundColor: SECTION_BG }}>
+    <section id="ydelser" className="px-6 py-24 sm:px-10 lg:py-32" style={{ backgroundColor: SECTION_BG }}>
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="text-sm font-bold uppercase tracking-wide" style={{ color: ACCENT }}>
-              02 — Ydelser
+              02 - Ydelser
             </p>
             <h2 className="mt-5 text-4xl font-extrabold leading-[1.05] sm:text-6xl" style={{ color: TEXT_DARK }}>
               Rent. Enkelt.
@@ -77,7 +66,7 @@ export default function Services() {
             </h2>
           </div>
           <p className="max-w-sm text-base leading-7" style={{ color: TEXT_MUTED }}>
-            Vælg det format, der passer dig — detaljer og et tidspunkt aftaler vi personligt.
+            Vælg det format, der passer dig - detaljer og et tidspunkt aftaler vi personligt.
           </p>
         </div>
 
@@ -103,12 +92,7 @@ export default function Services() {
               <p className="max-w-md text-sm leading-6" style={{ color: TEXT_MUTED }}>
                 {text}
               </p>
-              <span
-                className="hidden h-9 w-9 items-center justify-center rounded-full opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100 md:flex"
-                style={{ backgroundColor: ACCENT }}
-              >
-                <ArrowIcon />
-              </span>
+           
             </article>
           ))}
         </div>

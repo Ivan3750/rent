@@ -15,7 +15,7 @@ export const COMPANY_NAME = "RenServ";
 export const COMPANY_FULL_NAME = "RenServ Rengøring ApS";
 export const PHONE = "+45 22 85 88 80";
 export const PHONE_HREF = "tel:+4522858880";
-export const EMAIL = "kontakt@nordklar.dk";
+export const EMAIL = "kontakt@renserv.dk";
 export const CVR = "41 25 88 03";
 export const ADDRESS = "Sundvej 12, 8700 Horsens";
 export const SERVICE_AREA = "Horsens · Hedensted · Brædstrup · Vejle";
@@ -25,8 +25,7 @@ export const MAP_EMBED_SRC =
 export const NAV_LINKS: NavLink[] = [
   { href: "#om-os", label: "Om os" },
   { href: "#ydelser", label: "Ydelser" },
-  { href: "#hvorfor", label: "Hvorfor os" },
-  { href: "#priser", label: "Priser" },
+   { href: "#priser", label: "Priser" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 

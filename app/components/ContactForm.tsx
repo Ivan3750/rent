@@ -19,6 +19,8 @@ const FIELD_CLASS =
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState<ContactFormState>(EMPTY_FORM);
 
   const set =
@@ -26,11 +28,36 @@ export function ContactForm() {
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
       setForm((f) => ({ ...f, [key]: e.target.value }));
 
-  const submit = (e: FormEvent) => {
+  const submit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!form.name.trim() || !form.phone.trim()) return;
-    // TODO: wire this up to a real submission endpoint (email API, CRM, etc.)
-    setSent(true);
+    setError(null);
+
+    if (!form.name.trim() || !form.phone.trim()) {
+      setError("Udfyld venligst navn og telefon.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || "Noget gik galt");
+      }
+
+      setSent(true);
+    } catch (err) {
+      console.error("Contact form submit error:", err);
+      setError("Der opstod en fejl. Prøv venligst igen.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (sent) {
@@ -125,11 +152,14 @@ export function ContactForm() {
         />
       </div>
 
+      {error && <p className="text-sm text-red-600">{error}</p>}
+
       <button
         type="submit"
-        className="w-full rounded-xl bg-[#16A085] px-6 py-3.5 text-sm font-medium text-white transition hover:bg-blue-800"
+        disabled={loading}
+        className="w-full rounded-xl bg-[#16A085] px-6 py-3.5 text-sm font-medium text-white transition hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Send forespørgsel
+        {loading ? "Sender…" : "Send forespørgsel"}
       </button>
     </form>
   );

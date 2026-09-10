@@ -1,19 +1,17 @@
-import { ArrowUpRight, HeartHandshake, ShieldCheck, Sparkles } from "lucide-react";
-
- function About() {
+import {
+  ArrowUpRight,
+  HeartHandshake,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-react";
+import aboutImage from "../assets/about.jpg";
+function About() {
   return (
     <section
-    id="om-os"
+      id="om-os"
       className="relative overflow-hidden px-6 py-24 md:px-12"
       style={{ backgroundColor: "#F6F9F8" }}
     >
-      {/* decorative blue blob — quiet, kept to the edge */}
-      <div
-        className="pointer-events-none absolute -left-24 top-0 h-80 w-80 rounded-full"
-        style={{ backgroundColor: "#EFF7FF" }}
-        aria-hidden="true"
-      />
-
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-2">
         {/* Left: text */}
         <div className="max-w-xl">
@@ -21,52 +19,46 @@ import { ArrowUpRight, HeartHandshake, ShieldCheck, Sparkles } from "lucide-reac
             className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
             style={{ color: "#17221F" }}
           >
-            Om os — et team, man kan {/*  */}
+            Om os - et team, man kan {/*  */}
             <em className="font-serif italic font-medium">stole på</em>
           </h2>
 
-          <div className="mt-6 space-y-4 text-base leading-relaxed" style={{ color: "#617078" }}>
+          <div
+            className="mt-6 space-y-4 text-base leading-relaxed"
+            style={{ color: "#617078" }}
+          >
             <p>
-              RenServ — det er et familiebedrift: vi med mor og far rengører huse og kontorbygninger
-              over hele Danmark med egne hænder, ikke via tilfældige underleverandører.
-              Hvert bestilling er vores personlige rygte, så vi tager det alvorligt,
-              som om vi rengjorde vores eget hjem.
+              RenServ er en familievirksomhed, hvor vi som familie selv står for
+              rengøringen af både private hjem og erhverv. Vi udfører arbejdet
+              med egne hænder og går op i, at hver eneste kunde får en grundig
+              og pålidelig service.
             </p>
+
             <p>
-              Vi startede med det små — rengøring for naboer og kendte — og
-              voksede takket være en simpel formel: komme i tide, gøre
-              mere end forventet, og svare for resultatet, ikke bare
-              "arbejde timer".
+              For os handler rengøring om mere end bare at få arbejdet gjort. Vi
+              møder til tiden, arbejder grundigt og tager ansvar for det
+              resultat, vi afleverer. Vi ønsker, at vores kunder skal kunne
+              mærke forskellen på en rengøring, der bare er udført, og en
+              rengøring, der er gjort ordentligt.
             </p>
+
             <p>
-              Vi tror på, at tillid bygges på småting: rene hjørner, som
-              ingen har bedt om at vaske, tilbagekaldte opkald under dagen og ærlige
+              Vi tror på, at tillid bygges gennem de små detaljer: rene hjørner,
+              omhyggeligt arbejde og god kommunikation. Derfor lægger vi vægt på
+              at være nemme at få fat på, holde vores aftaler og tilbyde ærlige
               priser uden skjulte ekstraomkostninger.
             </p>
           </div>
 
- 
-
-          <button
-            className="mt-10 flex items-center gap-3 rounded-full py-3 pl-6 pr-2.5 text-base font-semibold text-white transition-colors duration-200 hover:bg-[#164FAF]"
-            style={{ backgroundColor: "#1C62D9" }}
-          >
-            Bestil rengøring
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">
-              <ArrowUpRight size={16} />
-            </span>
-          </button>
+          
         </div>
 
-        {/* Right: photo + floating card */}
-        <div className="relative mx-auto w-full max-w-md">
-          {/* Replace src with your own photo */}
-          <img
-            src="/about-photo.jpg"
-            alt="Команда RenServ за роботою"
-            className="h-[420px] w-full rounded-3xl object-cover"
+        <div className="relative mx-auto w-full max-w-md h-full">
+            <img
+            src={aboutImage.src}
+            alt="RenServ Om os"
+            className="h-[420px] w-full rounded-3xl object-cover h-full"
           />
- 
         </div>
       </div>
     </section>

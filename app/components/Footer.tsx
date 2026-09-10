@@ -39,14 +39,11 @@ function Footer() {
           <div>
             <p className="text-sm font-semibold text-white">Kontakt</p>
             <ul className="mt-4 space-y-3 text-sm text-white/60">
-              <li className="flex items-center gap-2">
-                <Phone size={15} />
-                <a href="tel:+4522858880" className="hover:text-white">+45 22 85 88 80</a>
-              </li>
+  
               <li className="flex items-center gap-2">
                 <Mail size={15} />
-                <a href="mailto:kontakt@nordklar.dk" className="hover:text-white">
-                  kontakt@nordklar.dk
+                <a href="mailto:kontakt@renserv.dk" className="hover:text-white">
+                  kontakt@renserv.dk
                 </a>
               </li>
             </ul>
@@ -56,8 +53,7 @@ function Footer() {
         {/* Legal bar */}
         <div className="flex flex-col gap-3 border-t border-white/10 py-6 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} RenServ. Alle rettigheder forbeholdes.</p>
-          {/* CVR ще не зареєстровано — заповніть після реєстрації бізнесу */}
-          <p>RenServ (CVR: [заповнити]) · [юридична назва]</p>
+ 
         </div>
       </div>
     </footer>

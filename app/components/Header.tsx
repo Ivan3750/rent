@@ -1,34 +1,48 @@
 // Header.jsx
 "use client";
+
 import { useEffect, useState } from "react";
-import { ArrowUpRight } from "lucide-react";
-import { COMPANY_NAME, NAV_LINKS, PHONE, PHONE_HREF } from "../lib/constants";
+import {
+  ArrowUpRight,
+  ChevronDown,
+} from "lucide-react";
+
+import { COMPANY_NAME } from "../lib/constants";
 import logo from "../assets/RenServ.png";
-function MarkIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="size-4" fill="none">
-      <path
-        d="M12 3c2.8 3.6 5 6.8 5 9.5a5 5 0 1 1-10 0C7 9.8 9.2 6.6 12 3Z"
-        fill="#F6F9F8"
-      />
-    </svg>
-  );
-}
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
-    const SCROLL_THRESHOLD = 24; // px, коли хедер переходить у "плаваючий" стан
+    const SCROLL_THRESHOLD = 24;
 
     function handleScroll() {
       setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
     }
 
-    handleScroll(); // на випадок, якщо сторінку відкрили вже проскроленою
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const NAV_LINKS = [
+    { href: "/top", label: "Forside" },
+    { href: "/om-os", label: "Om Os" },
+    { href: "/priser", label: "Priser" },
+  ];
+
+  const SERVICE_LINKS = [
+    { href: "/hovedrengøring", label: "Hovedrengøring" },
+    { href: "/kontorrengøring", label: "Kontorrengøring" },
+    { href: "/hjemrengøring", label: "Hjemrengøring" },
+    { href: "/flytterengøring", label: "Flytterengøring" },
+  ];
 
   return (
     <div className="fixed top-0 z-50 w-full px-0">
@@ -46,44 +60,97 @@ export function Header() {
             isScrolled ? "h-16" : "h-20",
           ].join(" ")}
         >
-          <a href="#top" className="flex items-center gap-2.5">
-            <img src={logo.src} alt={COMPANY_NAME} className="w-12 h-12" />
+          {/* Logo */}
+          <a
+            href="#top"
+            className="flex shrink-0 items-center gap-2.5"
+          >
+            <img
+              src={logo.src}
+              alt={COMPANY_NAME}
+              className="h-12 w-12"
+            />
 
             <span className="text-lg font-semibold tracking-tight text-[#17221F]">
               {COMPANY_NAME}
             </span>
           </a>
 
-          <nav className="hidden items-center gap-8 text-sm text-[#617078] md:flex">
-            {NAV_LINKS.map(({ href, label }) => (
+          {/* Desktop Navigation */}
+          <nav className="hidden items-center gap-6 text-sm text-[#617078] lg:flex">
+            {NAV_LINKS.slice(0, 2).map(({ href, label }) => (
               <a
                 key={href}
                 href={href}
-                className="transition-colors hover:text-[#17221F]"
+                className="whitespace-nowrap transition-colors hover:text-[#17221F]"
               >
                 {label}
               </a>
             ))}
+
+            {/* Services Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() =>
+                  setIsServicesOpen(!isServicesOpen)
+                }
+                className="flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[#17221F]"
+                aria-expanded={isServicesOpen}
+              >
+                Rengøring
+                <ChevronDown
+                  size={15}
+                  className={`transition-transform duration-200 ${
+                    isServicesOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {isServicesOpen && (
+                <div className="absolute left-0 top-full z-50 w-56 pt-3">
+                  <div className="overflow-hidden rounded-2xl border border-[#EFF7FF] bg-white p-2 shadow-xl">
+                    {SERVICE_LINKS.map(({ href, label }) => (
+                      <a
+                        key={href}
+                        href={href}
+                        onClick={() =>
+                          setIsServicesOpen(false)
+                        }
+                        className="block rounded-xl px-4 py-3 text-sm text-[#617078] transition-colors hover:bg-[#F6F9F8] hover:text-[#17221F]"
+                      >
+                        {label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <a
+              href={NAV_LINKS[2].href}
+              className="whitespace-nowrap transition-colors hover:text-[#17221F]"
+            >
+              Priser
+            </a>
           </nav>
 
+          {/* Contact Button */}
           <a
-          href={"#kontakt"}
-            className="group flex items-center gap-2 rounded-full py-2 pl-5 pr-2 text-sm font-semibold text-white
-             transition-all duration-300 ease-out
-             hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#1C62D9]/25
-             active:translate-y-0"
-            style={{ backgroundColor: "#1C62D9" }}
+            href="#kontakt"
+            className="group flex shrink-0 items-center gap-2 rounded-full py-2 pl-5 pr-2 text-sm font-semibold text-white transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3F59CE]/25 active:translate-y-0"
+            style={{ backgroundColor: "#3F59CE" }}
           >
-            Bestil rengøring
-            <span
-              className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20
-               transition-all duration-300 ease-out
-               group-hover:bg-white/30 group-hover:rotate-12"
-            >
+            Kontakt
+
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-all duration-300 ease-out group-hover:rotate-12 group-hover:bg-white/30">
               <ArrowUpRight
                 size={15}
-                className="transition-transform duration-300 ease-out
-                 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                className="transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </span>
           </a>

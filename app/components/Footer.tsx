@@ -8,7 +8,7 @@ const legalLinks = [
 ];
 function Footer() {
   return (
-    <footer className="px-6 pt-16 md:px-12" style={{ backgroundColor: "#164FAF" }}>
+    <footer className="px-6 pt-16 md:px-12" style={{ backgroundColor: "#3F59CE" }}>
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-4">
           {/* Brand */}
@@ -16,7 +16,7 @@ function Footer() {
             <div className="flex items-center gap-2">
               <span
                 className="flex h-9 w-9 items-center justify-center rounded-full"
-                style={{ backgroundColor: "#1C62D9" }}
+                style={{ backgroundColor: "#3F59CE" }}
               >
                 <Droplet size={16} className="text-white" fill="white" />
               </span>

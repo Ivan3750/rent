@@ -1,7 +1,7 @@
 
 import { ArrowUpRight, Star } from "lucide-react";
-import heroImage from "../assets/hero.jpg";
-import { Header } from "./Header";
+import heroImage from "../../assets/hero.jpg";
+import { Header } from "../Header";
 
 export default function Hero() {
   return (
@@ -45,9 +45,9 @@ export default function Hero() {
           href={"#kontakt"}
                 className="group flex items-center gap-2 rounded-full py-2 pl-6 pr-2 text-sm font-semibold text-white
              transition-all duration-300 ease-out
-             hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#1C62D9]/25
+             hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3F59CE]/25
              active:translate-y-0"
-                style={{ backgroundColor: "#1C62D9" }}
+                style={{ backgroundColor: "#3F59CE" }}
               >
                 Bestil rengøring 
                 <span
@@ -66,7 +66,7 @@ export default function Hero() {
              {/*  <div className="flex items-center gap-2">
                 <div
                   className="flex gap-0.5"
-                  style={{ color: "#1C62D9" }}
+                  style={{ color: "#3F59CE" }}
                   aria-label="5 stjerner"
                 >
                   {Array.from({ length: 5 }).map((_, i) => (

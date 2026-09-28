@@ -1,10 +1,11 @@
-import { Home, Sparkles, Building2, Droplets, Wrench, Armchair } from "lucide-react";
+import { Home, Sparkles, Building2, Wrench } from "lucide-react";
 
-const SECTION_BG = "#EFF7FF";
+const SECTION_BG = "#F6F9F8";
 const TEXT_DARK = "#17221F";
 const TEXT_MUTED = "#617078";
-const ACCENT = "#1C62D9";
-const BORDER = "rgba(23, 34, 31, 0.1)";
+const ACCENT = "#D6FF3F";
+const CARD_BG = "#FFFFFF";
+const DARK = "#14181A";
 
 const services = [
   {
@@ -31,14 +32,13 @@ const services = [
     title: "Rengøring efter renovering",
     text: "Byggestøv og materialerester fjernes, så boligen er klar til brug med det samme.",
   },
- 
 ];
 
 function ArrowIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
       <path
-        d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12"
+        d="M4 12L12 4M12 4H5.5M12 4V10.5"
         stroke="#FFFFFF"
         strokeWidth="1.6"
         strokeLinecap="round"
@@ -50,49 +50,87 @@ function ArrowIcon() {
 
 export default function Services() {
   return (
-    <section id="ydelser" className="px-6 py-24 sm:px-10 lg:py-32" style={{ backgroundColor: SECTION_BG }}>
+    <section
+      id="ydelser"
+      className="px-6 py-24 sm:px-10 lg:py-32"
+      style={{ backgroundColor: SECTION_BG }}
+    >
       <div className="mx-auto max-w-6xl">
+        {/* Header */}
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wide" style={{ color: ACCENT }}>
-              02 - Ydelser
-            </p>
-            <h2 className="mt-5 text-4xl font-extrabold leading-[1.05] sm:text-6xl" style={{ color: TEXT_DARK }}>
-              Rent. Enkelt.
-              <br />
-              <span className="font-serif text-3xl font-normal italic sm:text-5xl">
-                Sådan gør vi det.
-              </span>
+            {/* Badge */}
+            <div
+              className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
+              style={{ borderColor: "#E1E7E4", color: TEXT_DARK }}
+            >
+              <span
+                className="h-2 w-2 rounded-full"
+                style={{ backgroundColor: ACCENT }}
+              />
+              Ydelser
+            </div>
+
+            <h2
+              className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
+              style={{ color: TEXT_DARK }}
+            >
+              Rent, enkelt og{" "}
+              <em className="font-serif italic font-medium">pålideligt</em>
             </h2>
           </div>
-          <p className="max-w-sm text-base leading-7" style={{ color: TEXT_MUTED }}>
-            Vælg det format, der passer dig - detaljer og et tidspunkt aftaler vi personligt.
+
+          <p
+            className="max-w-sm text-base leading-relaxed"
+            style={{ color: TEXT_MUTED }}
+          >
+            Vælg det format, der passer dig - detaljer og et tidspunkt aftaler
+            vi personligt.
           </p>
         </div>
 
-        <div className="mt-16" style={{ borderTop: `1px solid ${BORDER}` }}>
+        {/* Service rows */}
+        <div className="mt-14 flex flex-col gap-4">
           {services.map(({ icon: Icon, number, title, text }) => (
             <article
               key={number}
-              className="group grid items-center gap-5 py-7 transition-colors md:grid-cols-[56px_72px_1fr_1fr_44px] md:py-8"
-              style={{ borderBottom: `1px solid ${BORDER}` }}
+              className="group grid grid-cols-[40px_48px_1fr_44px] items-center gap-5 rounded-2xl p-5 shadow-sm transition-all hover:shadow-md sm:grid-cols-[40px_56px_1fr_1fr_48px] sm:p-6"
+              style={{ backgroundColor: CARD_BG }}
             >
-              <span className="text-xs font-bold" style={{ color: TEXT_MUTED }}>
+              <span
+                className="text-xs font-bold"
+                style={{ color: TEXT_MUTED }}
+              >
                 {number}
               </span>
+
               <span
-                className="grid size-12 place-items-center rounded-full bg-white transition-transform duration-300 group-hover:rotate-6"
-                style={{ color: ACCENT }}
+                className="grid size-11 place-items-center rounded-full transition-transform duration-300 group-hover:rotate-6 sm:size-12"
+                style={{ backgroundColor: SECTION_BG, color: TEXT_DARK }}
               >
-                <Icon size={22} />
+                <Icon size={20} />
               </span>
-              <h3 className="text-xl font-bold sm:text-2xl" style={{ color: TEXT_DARK }}>
+
+              <h3
+                className="text-lg font-bold sm:text-xl"
+                style={{ color: TEXT_DARK }}
+              >
                 {title}
               </h3>
-              <p className="max-w-md text-sm leading-6" style={{ color: TEXT_MUTED }}>
+
+              <p
+                className="hidden max-w-md text-sm leading-relaxed sm:block"
+                style={{ color: TEXT_MUTED }}
+              >
                 {text}
               </p>
-           
+
+              <span
+                className="grid size-10 place-items-center justify-self-end rounded-full transition-colors group-hover:bg-[#D6FF3F] sm:size-11"
+                style={{ backgroundColor: DARK }}
+              >
+                <ArrowIcon />
+              </span>
             </article>
           ))}
         </div>

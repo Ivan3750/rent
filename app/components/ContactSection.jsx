@@ -68,7 +68,7 @@ export default function ContactSection() {
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
                 style={{ backgroundColor: "#EFF7FF" }}
               >
-                <Phone size={19} style={{ color: "#1C62D9" }} />
+                <Phone size={19} style={{ color: "#3F59CE" }} />
               </span>
               <span>
                 <p className="text-sm" style={{ color: "#617078" }}>Telefon</p>
@@ -83,7 +83,7 @@ export default function ContactSection() {
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
                 style={{ backgroundColor: "#EFF7FF" }}
               >
-                <Mail size={19} style={{ color: "#1C62D9" }} />
+                <Mail size={19} style={{ color: "#3F59CE" }} />
               </span>
               <span>
                 <p className="text-sm" style={{ color: "#617078" }}>Email</p>
@@ -98,7 +98,7 @@ export default function ContactSection() {
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
                 style={{ backgroundColor: "#EFF7FF" }}
               >
-                <Clock size={19} style={{ color: "#1C62D9" }} />
+                <Clock size={19} style={{ color: "#3F59CE" }} />
               </span>
               <span>
                 <p className="text-sm" style={{ color: "#617078" }}>Arbejdstimer</p>
@@ -125,7 +125,7 @@ export default function ContactSection() {
           {submitted ? (
             <div
               className="mt-6 rounded-2xl px-5 py-6 text-sm font-medium"
-              style={{ backgroundColor: "#EFF7FF", color: "#164FAF" }}
+              style={{ backgroundColor: "#EFF7FF", color: "#3F59CE" }}
             >
               Tak skal du have! Din forespørgsel er sendt - vi kontakter dig snarest.
             </div>
@@ -145,7 +145,7 @@ export default function ContactSection() {
                   min="2"
                   max="50"
                   required
-                  className="w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#1C62D9]"
+                  className="w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#3F59CE]"
                   style={{ borderColor: "#EFF7FF", color: "#17221F" }}
                 />
               </div>
@@ -162,7 +162,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   placeholder="+45 00 00 00 00"
                   required
-                  className="w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#1C62D9]"
+                  className="w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#3F59CE]"
                   style={{ borderColor: "#EFF7FF", color: "#17221F" }}
                 />
               </div>
@@ -178,7 +178,7 @@ export default function ContactSection() {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Beskriv, hvad der skal rengøres"
-                  className="w-full resize-none rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#1C62D9]"
+                  className="w-full resize-none rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#3F59CE]"
                   style={{ borderColor: "#EFF7FF", color: "#17221F" }}
                   max="500"
                 />
@@ -193,8 +193,8 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex w-full items-center justify-center gap-2 rounded-full py-3.5 text-base font-semibold text-white transition-colors duration-200 hover:bg-[#164FAF] disabled:cursor-not-allowed disabled:opacity-60"
-                style={{ backgroundColor: "#1C62D9" }}
+                className="flex w-full items-center justify-center gap-2 rounded-full py-3.5 text-base font-semibold text-white transition-colors duration-200 hover:bg-[#3F59CE] disabled:cursor-not-allowed disabled:opacity-60"
+                style={{ backgroundColor: "#3F59CE" }}
               >
                 {loading ? "Sender…" : "Send forespørgsel"}
                 {!loading && <Send size={16} />}

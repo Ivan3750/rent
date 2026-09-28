@@ -1,10 +1,6 @@
-import  Hero from "./components/ui/Hero";
-import   About  from "./components/About"; 
-import   Pricing  from "./components/Pricing";
-import   ContactSection   from "./components/ContactSection";
-import   FAQ   from "./components/FAQ";
-import   ServiceCategories   from "./components/ServiceCategories";
-import   Footer   from "./components/Footer";
+import Image from "next/image";
+ import  WhatsIncluded from "./_components/WhatsIncluded";
+ 
 import { Metadata } from "next";
 
 
@@ -134,13 +130,8 @@ export default function Home() {
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-       <Hero />
-      <About />
-      <ServiceCategories/>
-      <Pricing/>
-      <ContactSection/>
-      <FAQ/>
-       <Footer />
+       <WhatsIncluded />
+ 
     </div>
   );
 }

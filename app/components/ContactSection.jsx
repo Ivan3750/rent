@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, Clock, MapPin, Send } from "lucide-react";
+import { Phone, Mail, Clock, MapPin, ArrowUpRight } from "lucide-react";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
@@ -44,19 +44,19 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="kontakt" className="px-6 py-24 md:px-12" style={{ backgroundColor: "#FFFFFF" }}>
+    <section id="kontakt" className="px-6 py-24 md:px-12" style={{ backgroundColor: "var(--color-card)" }}>
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 md:grid-cols-2">
         {/* Left: contact info + service area */}
         <div className="max-w-lg">
           <h2
             className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
-            style={{ color: "#17221F" }}
+            style={{ color: "var(--color-text-dark)" }}
           >
             Kontakt os - {/*  */}
             <em className="font-serif italic font-medium">vi svarer hurtigt</em>
           </h2>
 
-          <p className="mt-5 text-base leading-relaxed" style={{ color: "#617078" }}>
+          <p className="mt-5 text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
             Ring til os, send en e-mail eller udfyld formularen - vi
             kontakter dig i løbet af dagen for at aftale dato og detaljer
             om rengøringen.
@@ -66,12 +66,12 @@ export default function ContactSection() {
 {/*             <a href="tel:+4522858880" className="flex items-center gap-4">
               <span
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                style={{ backgroundColor: "#EFF7FF" }}
+                style={{ backgroundColor: "var(--color-section)" }}
               >
                 <Phone size={19} style={{ color: "#3F59CE" }} />
               </span>
               <span>
-                <p className="text-sm" style={{ color: "#617078" }}>Telefon</p>
+                <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>Telefon</p>
                 <p className="text-base font-semibold" style={{ color: "#17221F" }}>
                   +45 22 85 88 80
                 </p>
@@ -81,12 +81,12 @@ export default function ContactSection() {
             <a href="mailto:kontakt@renserv.dk" className="flex items-center gap-4">
               <span
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                style={{ backgroundColor: "#EFF7FF" }}
+                style={{ backgroundColor: "var(--color-section)" }}
               >
-                <Mail size={19} style={{ color: "#3F59CE" }} />
+                <Mail size={19} style={{ color: "var(--color-accent)" }} />
               </span>
               <span>
-                <p className="text-sm" style={{ color: "#617078" }}>Email</p>
+                <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>Email</p>
                 <p className="text-base font-semibold" style={{ color: "#17221F" }}>
                   kontakt@renserv.dk
                 </p>
@@ -96,9 +96,9 @@ export default function ContactSection() {
             <div className="flex items-center gap-4">
               <span
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                style={{ backgroundColor: "#EFF7FF" }}
+                style={{ backgroundColor: "var(--color-section)" }}
               >
-                <Clock size={19} style={{ color: "#3F59CE" }} />
+                <Clock size={19} style={{ color: "var(--color-accent)" }} />
               </span>
               <span>
                 <p className="text-sm" style={{ color: "#617078" }}>Arbejdstimer</p>
@@ -113,19 +113,19 @@ export default function ContactSection() {
         {/* Right: order form */}
         <div
           className="rounded-3xl border p-8"
-          style={{ backgroundColor: "#F6F9F8", borderColor: "#EFF7FF" }}
+          style={{ backgroundColor: "var(--color-section)", borderColor: "var(--color-border)" }}
         >
           <h3 className="text-xl font-bold" style={{ color: "#17221F" }}>
             Bestil rengøring
           </h3>
-          <p className="mt-1 text-sm" style={{ color: "#617078" }}>
+          <p className="mt-1 text-sm" style={{ color: "var(--color-text-muted)" }}>
             Efterlad dine kontaktoplysninger - vi ringer til dig for at afklare detaljerne.
           </p>
 
           {submitted ? (
             <div
               className="mt-6 rounded-2xl px-5 py-6 text-sm font-medium"
-              style={{ backgroundColor: "#EFF7FF", color: "#3F59CE" }}
+              style={{ backgroundColor: "var(--color-section)", color: "var(--color-accent)" }}
             >
               Tak skal du have! Din forespørgsel er sendt - vi kontakter dig snarest.
             </div>
@@ -145,8 +145,8 @@ export default function ContactSection() {
                   min="2"
                   max="50"
                   required
-                  className="w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#3F59CE]"
-                  style={{ borderColor: "#EFF7FF", color: "#17221F" }}
+                  className="w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[var(--color-accent)]"
+                  style={{ borderColor: "var(--color-border)", color: "var(--color-text-dark)" }}
                 />
               </div>
 
@@ -162,8 +162,8 @@ export default function ContactSection() {
                   onChange={handleChange}
                   placeholder="+45 00 00 00 00"
                   required
-                  className="w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#3F59CE]"
-                  style={{ borderColor: "#EFF7FF", color: "#17221F" }}
+                  className="w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[var(--color-accent)]"
+                  style={{ borderColor: "var(--color-border)", color: "var(--color-text-dark)" }}
                 />
               </div>
 
@@ -179,7 +179,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   placeholder="Beskriv, hvad der skal rengøres"
                   className="w-full resize-none rounded-xl border bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#3F59CE]"
-                  style={{ borderColor: "#EFF7FF", color: "#17221F" }}
+                  style={{ borderColor: "var(--color-border)", color: "var(--color-text-dark)" }}
                   max="500"
                 />
               </div>
@@ -193,11 +193,11 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex w-full items-center justify-center gap-2 rounded-full py-3.5 text-base font-semibold text-white transition-colors duration-200 hover:bg-[#3F59CE] disabled:cursor-not-allowed disabled:opacity-60"
-                style={{ backgroundColor: "#3F59CE" }}
+                className="flex w-full items-center justify-center gap-2 rounded-full py-3.5 text-base font-semibold text-white transition-all duration-300 ease-out hover:bg-[var(--color-primary-hover)] disabled:cursor-not-allowed disabled:opacity-60"
+                style={{ backgroundColor: "var(--color-dark)" }}
               >
                 {loading ? "Sender…" : "Send forespørgsel"}
-                {!loading && <Send size={16} />}
+                {!loading && <ArrowUpRight size={16} />}
               </button>
             </form>
           )}

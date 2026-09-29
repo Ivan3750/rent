@@ -32,7 +32,7 @@ export function Contact() {
           </div>
         </div>
 
-        <div className="rounded-3xl bg-white p-7 text-slate-900 shadow-xl md:p-9">
+        <div className="rounded-3xl bg-white p-7 text-slate-900 border border-[var(--color-border)] md:p-9">
           <h3 className="text-xl font-semibold">Send os en besked</h3>
           <ContactForm />
         </div>

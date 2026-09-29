@@ -3,7 +3,7 @@ import { Home, Sparkles, Building2, Wrench } from "lucide-react";
 const SECTION_BG = "#F6F9F8";
 const TEXT_DARK = "#17221F";
 const TEXT_MUTED = "#617078";
-const ACCENT = "#D6FF3F";
+const ACCENT = "#3F59CE";
 const CARD_BG = "#FFFFFF";
 const DARK = "#14181A";
 
@@ -94,7 +94,7 @@ export default function Services() {
           {services.map(({ icon: Icon, number, title, text }) => (
             <article
               key={number}
-              className="group grid grid-cols-[40px_48px_1fr_44px] items-center gap-5 rounded-2xl p-5 shadow-sm transition-all hover:shadow-md sm:grid-cols-[40px_56px_1fr_1fr_48px] sm:p-6"
+              className="group grid grid-cols-[40px_48px_1fr_44px] items-center gap-5 rounded-2xl p-5 border border-[var(--color-border)] transition-all sm:grid-cols-[40px_56px_1fr_1fr_48px] sm:p-6"
               style={{ backgroundColor: CARD_BG }}
             >
               <span
@@ -126,7 +126,7 @@ export default function Services() {
               </p>
 
               <span
-                className="grid size-10 place-items-center justify-self-end rounded-full transition-colors group-hover:bg-[#D6FF3F] sm:size-11"
+                className="grid size-10 place-items-center justify-self-end rounded-full transition-colors group-hover:bg-[#3F59CE] sm:size-11"
                 style={{ backgroundColor: DARK }}
               >
                 <ArrowIcon />

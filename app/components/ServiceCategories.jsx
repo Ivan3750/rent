@@ -47,15 +47,15 @@ function Tag({ children }) {
 function BookButton() {
   return (
     <button
-      className="group mt-6 inline-flex items-center gap-3 rounded-full py-1.5 pl-5 pr-1.5 text-sm font-semibold transition-colors"
-      style={{ backgroundColor: "var(--color-dark)", color: "#FFFFFF" }}
+      className="group mt-6 inline-flex items-center gap-3 rounded-full py-2 pl-6 pr-2 text-sm font-semibold text-white transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0"
+      style={{ backgroundColor: "var(--color-dark)" }}
     >
       Book rengøring
       <span
-        className="flex h-8 w-8 items-center justify-center rounded-full transition-colors group-hover:bg-[var(--color-accent-hover)]"
-        style={{ backgroundColor: "var(--color-accent)" }}
+        className="flex h-9 w-9 items-center justify-center rounded-full transition-colors group-hover:bg-white/20"
+        style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
       >
-        <ArrowUpRight size={15} color="var(--color-dark)" />
+        <ArrowUpRight size={16} color="#ffffff" />
       </span>
     </button>
   );
@@ -64,12 +64,12 @@ function BookButton() {
 export default function ServiceCategories() {
   return (
     <section
-      className="px-6 py-24 sm:px-10 md:px-12 container"
+      className="px-6 py-24 sm:px-10 md:px-12"
       style={{ backgroundColor: "var(--color-background)" }}
     >
-      <div className="mx-auto ">
+      <div className="mx-auto max-w-6xl">
         {/* Header */}
-        <div className="mt-15 mx-auto max-w-xl text-center">
+        <div className="mx-auto max-w-xl text-center">
           <div
             className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
             style={{
@@ -78,7 +78,7 @@ export default function ServiceCategories() {
             }}
           >
             <span
-              className=" h-2 w-2 rounded-full"
+              className="h-2 w-2 rounded-full"
               style={{ backgroundColor: "var(--color-accent)" }}
             />
             Ydelser

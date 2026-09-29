@@ -143,22 +143,22 @@ export default function Pricing() {
                 </span>
               </div>
 
-              <button
-                className="group mt-6 flex items-center justify-between gap-3 rounded-full py-1.5 pl-4 pr-1.5 text-sm font-semibold transition-colors"
+              <a
+                href="/#kontakt"
+                className="group mt-6 inline-flex items-center gap-3 rounded-full py-2 pl-6 pr-2 text-sm font-semibold text-white transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[var(--color-accent)] active:translate-y-0"
                 style={{
-                  backgroundColor: highlighted ? "var(--color-accent)" : "var(--color-card)",
-                  color: "var(--color-dark)",
-                  border: highlighted ? "none" : "1px solid var(--color-border)",
+                  backgroundColor: "var(--color-dark)",
+                  color: "#ffffff",
                 }}
               >
                 Book nu
                 <span
-                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full"
-                  style={{ backgroundColor: "var(--color-dark)" }}
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-colors group-hover:bg-white/20"
+                  style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
                 >
-                  <ArrowUpRight size={15} color="var(--color-accent)" />
+                  <ArrowUpRight size={16} color="#ffffff" />
                 </span>
-              </button>
+              </a>
 
               <div
                 className="mt-6 flex-1 rounded-2xl p-4"
@@ -232,18 +232,19 @@ export default function Pricing() {
             </p>
           </div>
 
-          <button
-            className="group flex shrink-0 items-center gap-3 rounded-full py-2 pl-6 pr-2 text-sm font-semibold transition-colors"
-            style={{ backgroundColor: "var(--color-dark)", color: "#FFFFFF" }}
+          <a
+            href="/#kontakt"
+            className="group inline-flex shrink-0 items-center gap-3 rounded-full py-2 pl-6 pr-2 text-sm font-semibold text-white transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[var(--color-accent)] active:translate-y-0"
+            style={{ backgroundColor: "var(--color-dark)" }}
           >
             Få et tilbud
             <span
-              className="flex h-9 w-9 items-center justify-center rounded-full transition-colors group-hover:bg-[var(--color-accent-hover)]"
-              style={{ backgroundColor: "var(--color-accent)" }}
+              className="flex h-9 w-9 items-center justify-center rounded-full transition-colors group-hover:bg-white/20"
+              style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
             >
-              <ArrowUpRight size={16} color="var(--color-dark)" />
+              <ArrowUpRight size={16} color="#ffffff" />
             </span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

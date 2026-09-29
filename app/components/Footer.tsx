@@ -8,7 +8,7 @@ const legalLinks = [
 ];
 function Footer() {
   return (
-    <footer className="px-6 pt-16 md:px-12" style={{ backgroundColor: "#3F59CE" }}>
+    <footer className="px-6 pt-16 md:px-12" style={{ backgroundColor: "var(--color-dark)" }}>
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-12 pb-12 md:grid-cols-4">
           {/* Brand */}
@@ -16,7 +16,7 @@ function Footer() {
             <div className="flex items-center gap-2">
               <span
                 className="flex h-9 w-9 items-center justify-center rounded-full"
-                style={{ backgroundColor: "#3F59CE" }}
+                style={{ backgroundColor: "var(--color-accent)" }}
               >
                 <Droplet size={16} className="text-white" fill="white" />
               </span>
@@ -34,10 +34,10 @@ function Footer() {
           <div>
             <p className="text-sm font-semibold text-white">Menu</p>
             <ul className="mt-4 space-y-3 text-sm text-white/60">
-              <li><a href="#" className="hover:text-white">Om os</a></li>
-              <li><a href="#" className="hover:text-white">Tjenester</a></li>
-              <li><a href="#" className="hover:text-white">Priser</a></li>
-              <li><a href="#" className="hover:text-white">Kontakt</a></li>
+              <li><a href="/om-os" className="hover:text-white">Om os</a></li>
+              <li><a href="/rengoring-af-hjem" className="hover:text-white">Tjenester</a></li>
+              <li><a href="/#priser" className="hover:text-white">Priser</a></li>
+              <li><a href="/#kontakt" className="hover:text-white">Kontakt</a></li>
             </ul>
           </div>
 
@@ -64,7 +64,7 @@ function Footer() {
                  
                  <Link
                    href={href}
-                   className="hover:text-[#5a5a5a] transition-colors"
+                   className="hover:text-white transition-colors"
                  >
                    {label}
                  </Link>

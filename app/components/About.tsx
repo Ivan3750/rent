@@ -7,7 +7,7 @@ function About() {
     <section
       id="om-os"
       className="relative overflow-hidden px-6 py-24 md:px-12"
-      style={{ backgroundColor: "#F6F9F8" }}
+      style={{ backgroundColor: "var(--color-section)" }}
     >
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-2">
         {/* Left: text */}
@@ -15,18 +15,18 @@ function About() {
           {/* Badge */}
           <div
             className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
-            style={{ borderColor: "#E1E7E4", color: "#17221F" }}
+            style={{ borderColor: "var(--color-border)", color: "var(--color-text-dark)" }}
           >
             <span
               className="h-2 w-2 rounded-full"
-              style={{ backgroundColor: "#D6FF3F" }}
+              style={{ backgroundColor: "var(--color-accent)" }}
             />
             Om os
           </div>
 
           <h2
             className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
-            style={{ color: "#17221F" }}
+            style={{ color: "var(--color-text-dark)" }}
           >
             Et team, man kan{" "}
             <em className="font-serif italic font-medium">stole på</em>
@@ -34,7 +34,7 @@ function About() {
 
           <div
             className="mt-6 space-y-4 text-base leading-relaxed"
-            style={{ color: "#617078" }}
+            style={{ color: "var(--color-text-muted)" }}
           >
             <p>
               RenServ er en familievirksomhed, hvor vi som familie selv står for
@@ -60,18 +60,19 @@ function About() {
           </div>
 
           {/* CTA button */}
-          <button
-            className="group mt-8 inline-flex items-center gap-3 rounded-full py-1.5 pl-6 pr-1.5 text-sm font-semibold text-white transition-colors"
-            style={{ backgroundColor: "#14181A" }}
+          <a
+            href="/om-os"
+            className="group mt-8 inline-flex items-center gap-3 rounded-full py-2 pl-6 pr-2 text-sm font-semibold text-white transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0"
+            style={{ backgroundColor: "var(--color-dark)" }}
           >
             Mere om os
             <span
-              className="flex h-9 w-9 items-center justify-center rounded-full transition-colors group-hover:bg-[#D6FF3F]"
-              style={{ backgroundColor: "#ffffff" }}
+              className="flex h-9 w-9 items-center justify-center rounded-full transition-colors group-hover:bg-white/20"
+              style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
             >
-              <ArrowUpRight size={16} color="#14181A" />
+              <ArrowUpRight size={16} color="#ffffff" />
             </span>
-          </button>
+          </a>
         </div>
 
         {/* Right: images + floating stat */}
@@ -86,16 +87,16 @@ function About() {
           <img
             src={aboutImage.src}
             alt="RenServ detalje"
-            className="absolute -bottom-8 -left-8 h-32 w-32 rounded-2xl border-4 object-cover shadow-lg md:h-40 md:w-40"
-            style={{ borderColor: "#F6F9F8" }}
+            className="absolute -bottom-8 -left-8 h-32 w-32 rounded-2xl border-4 object-cover border-[var(--color-border)] md:h-40 md:w-40"
+            style={{ borderColor: "var(--color-section)" }}
           />
 
           {/* Floating stat card */}
           <div
-            className="absolute -right-6 top-6 max-w-[160px] rounded-2xl p-4 shadow-lg backdrop-blur-sm"
+            className="absolute -right-6 top-6 max-w-[160px] rounded-2xl p-4 border border-[var(--color-border)] backdrop-blur-sm"
             style={{ backgroundColor: "rgba(20,24,26,0.85)" }}
           >
-            <p className="text-3xl font-extrabold" style={{ color: "#D6FF3F" }}>
+            <p className="text-3xl font-extrabold" style={{ color: "var(--color-accent)" }}>
               98%
             </p>
             <p className="mt-1 text-xs leading-snug text-white/80">

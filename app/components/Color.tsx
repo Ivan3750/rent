@@ -1,7 +1,7 @@
 const colors = [
   { name: "primary", value: "var(--color-primary)", hex: "#3F59CE", text: "#FFFFFF" },
   { name: "primary-hover", value: "var(--color-primary-hover)", hex: "#344CB3", text: "#FFFFFF" },
-  { name: "accent", value: "var(--color-accent)", hex: "#D6FF3F", text: "#14181A" },
+  { name: "accent", value: "var(--color-accent)", hex: "#3F59CE", text: "#14181A" },
   { name: "accent-hover", value: "var(--color-accent-hover)", hex: "#C5ED2E", text: "#14181A" },
   { name: "background", value: "var(--color-background)", hex: "#FAF8F2", text: "#17221F" },
   { name: "section", value: "var(--color-section)", hex: "#F6F9F8", text: "#17221F" },

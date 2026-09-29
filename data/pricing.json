@@ -1,0 +1,74 @@
+{
+  "plans": [
+    {
+      "id": "hjemrengoring",
+      "name": "Rengøring af hjem",
+      "desc": "Fast eller enkeltstående rengøring af din bolig.",
+      "price": "249",
+      "unit": "kr/time",
+      "priceLabel": null,
+      "features": [
+        "Støvsugning og gulvvask",
+        "Køkken- og badeværelse",
+        "Generel støvaftørring",
+        "Tømning af skraldespande"
+      ],
+      "highlighted": false,
+      "icon": "home"
+    },
+    {
+      "id": "hovedrengoring",
+      "name": "Hovedrengøring",
+      "desc": "Dybderengøring af hele boligen, hjørne for hjørne.",
+      "price": "1.499",
+      "unit": "kr",
+      "priceLabel": "fra",
+      "features": [
+        "Indvendig vinduespudsning",
+        "Rengøring af hvidevarer",
+        "Afkalkning af bad",
+        "Desinficering af overflader"
+      ],
+      "highlighted": true,
+      "icon": "sparkles"
+    },
+    {
+      "id": "erhvervsrengoring",
+      "name": "Erhvervsrengøring",
+      "desc": "Rengøring af kontorer og erhvervslokaler.",
+      "price": "299",
+      "unit": "kr/time",
+      "priceLabel": null,
+      "features": [
+        "Kontor- og skrivebordsrengøring",
+        "Rengøring af toiletter",
+        "Affaldshåndtering",
+        "Fast ugentlig aftale"
+      ],
+      "highlighted": false,
+      "icon": "building"
+    },
+    {
+      "id": "flytterengoring",
+      "name": "Flytterengøring",
+      "desc": "Klargøring af boligen til aflevering eller nye beboere.",
+      "price": "2.999",
+      "unit": "kr",
+      "priceLabel": "fra",
+      "features": [
+        "Rengøring af skabe indvendigt",
+        "Køkken og hvidevarer",
+        "Badeværelse i dybden",
+        "Slutrengøring inkl. gulve"
+      ],
+      "highlighted": false,
+      "icon": "truck"
+    }
+  ],
+  "customQuote": {
+    "badge": "Andet behov?",
+    "title": "Anden rengøring - skræddersyet til dig",
+    "desc": "Passer din opgave ikke lige ind i en af vores standardpakker? Fortæl os om din bolig eller virksomhed, så laver vi et individuelt tilbud - uden binding og uden overraskelser.",
+    "ctaLabel": "Få et tilbud"
+  }
+}

@@ -5,28 +5,37 @@ import {
   ArrowUpRight,
   ChevronDown,
   ChevronRight,
-  CheckCircle2,
+  ChevronLeft,
   Home,
-  Building2,
-  Warehouse,
+  Sparkles,
+  Clock,
+  Shield,
+  Leaf,
+  Check,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Users,
+  Award,
+  Heart,
+  Droplets,
+  Wind,
+  Sun,
+  Quote,
+  ArrowRight,
   ClipboardList,
   Search,
   SprayCan,
-  Sparkles,
+  Building2,
+  Warehouse,
 } from "lucide-react";
 import { Header } from "../../components/Header";
-/* import heroImage from "../assets/hovedrengoring-hero.jpg";
- */
-/* ------------------------------------------------------------------ */
-/*  INDHOLD — skift kun dette objekt for at genbruge siden til         */
-/*  /rengoring-af-hjem, /erhvervsrengoring, /rengoring-efter-renovering */
-/* ------------------------------------------------------------------ */
+import heroImage from "../../assets/hero.jpg";
+import aboutImage from "../../assets/about.jpg";
 
 const content = {
-  breadcrumbs: [
-    { label: "Forside", href: "/" },
-    { label: "Hovedrengøring" },
-  ],
+  breadcrumbs: [{ label: "Forside", href: "/" }, { label: "Hovedrengøring" }],
   hero: {
     title: "Hovedrengøring",
     titleAccent: "i Horsens",
@@ -112,7 +121,7 @@ const content = {
     },
     {
       q: "Hvad koster en hovedrengøring i Horsens?",
-      a: `Priserne starter fra ${"1.499"} kr. og afhænger af boligens størrelse og stand. Du får altid et fast tilbud, inden vi går i gang.`,
+      a: "Priserne starter fra 1.499 kr. og afhænger af boligens størrelse og stand. Du får altid et fast tilbud, inden vi går i gang.",
     },
   ],
 };
@@ -121,22 +130,30 @@ const content = {
 /*  1. HERO                                                            */
 /* ------------------------------------------------------------------ */
 
-function ServiceHero() {
+function HovedrengoringHero() {
   return (
-    <section id="top" className="relative min-h-[70svh] overflow-hidden text-white md:min-h-[80svh]">
-   {/*    <img
-        src={heroImage.src}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover object-center"
-      /> */}
+    <section
+      id="top"
+      className="relative min-h-[70svh] overflow-hidden text-white md:min-h-[80svh]"
+    >
+      <div className="absolute inset-0">
+        <img
+          src={heroImage.src}
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-cover object-center"
+        />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-black/75" />
 
       <div className="relative z-10 flex min-h-[70svh] flex-col md:min-h-[80svh]">
         <Header />
 
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col justify-end px-5 pb-12 pt-24 sm:px-8 sm:pb-16 md:px-12 md:pb-20">
-          <nav aria-label="Brødkrumme" className="mb-5 flex flex-wrap items-center gap-1.5 text-sm text-white/70">
+          <nav
+            aria-label="Brødkrumme"
+            className="mb-5 flex flex-wrap items-center gap-1.5 text-sm text-white/70"
+          >
             {content.breadcrumbs.map((crumb, i) => (
               <span key={i} className="flex items-center gap-1.5">
                 {crumb.href ? (
@@ -146,7 +163,9 @@ function ServiceHero() {
                 ) : (
                   <span className="font-medium text-white">{crumb.label}</span>
                 )}
-                {i < content.breadcrumbs.length - 1 && <ChevronRight size={14} className="text-white/40" />}
+                {i < content.breadcrumbs.length - 1 && (
+                  <ChevronRight size={14} className="text-white/40" />
+                )}
               </span>
             ))}
           </nav>
@@ -163,14 +182,16 @@ function ServiceHero() {
 
             <div className="mt-7 flex flex-col items-start gap-6 sm:mt-9 sm:flex-row sm:items-center sm:gap-6">
               <a
-                href="#kontakt"
-                className="group flex items-center gap-2 rounded-full py-2 pl-6 pr-2 text-sm font-semibold text-white
-                  transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3F59CE]/25 active:translate-y-0"
-                style={{ backgroundColor: "#3F59CE" }}
+                href="/#kontakt"
+                className="group inline-flex items-center gap-3 rounded-full py-1.5 pl-6 pr-1.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-accent)]"
+                style={{ backgroundColor: "var(--color-dark)" }}
               >
                 {content.hero.ctaLabel}
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 transition-all duration-300 ease-out group-hover:bg-white/30 group-hover:rotate-12">
-                  <ArrowUpRight size={15} className="transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <span
+                  className="flex h-9 w-9 items-center justify-center rounded-full transition-colors group-hover:bg-white/20"
+                  style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
+                >
+                  <ArrowUpRight size={16} color="#ffffff" />
                 </span>
               </a>
             </div>
@@ -187,27 +208,65 @@ function ServiceHero() {
 
 function WhatIncluded() {
   return (
-    <section className="px-6 py-20 md:px-12" style={{ backgroundColor: "#FFFFFF" }}>
-      <div className="mx-auto max-w-5xl">
-        <h2 className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl" style={{ color: "#17221F" }}>
-          Hvad indebærer{" "}
-          <em className="font-serif italic font-medium">hovedrengøringen</em>
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed" style={{ color: "#617078" }}>
-          Vi går i dybden med hvert rum og sørger for, at intet overses. Herunder ser du, hvad der som
-          standard er inkluderet.
-        </p>
+    <section
+      className="px-6 py-24 md:px-12"
+      style={{ backgroundColor: "var(--color-background)" }}
+    >
+      <div className="mx-auto max-w-6xl">
+        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <div
+              className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
+              style={{
+                borderColor: "var(--color-border)",
+                color: "var(--color-text-dark)",
+                backgroundColor: "var(--color-card)",
+              }}
+            >
+              <span
+                className="h-2 w-2 rounded-full"
+                style={{ backgroundColor: "var(--color-accent)" }}
+              />
+              Hvad indebærer det
+            </div>
 
-        <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <h2
+              className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
+              style={{ color: "var(--color-text-dark)" }}
+            >
+              Hvad indebærer{" "}
+              <em className="font-serif italic font-medium">hovedrengøringen</em>
+            </h2>
+          </div>
+          <p className="max-w-sm text-sm leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
+            Vi går i dybden med hvert rum og sørger for, at intet overses. Herunder ser du, hvad der som standard er inkluderet.
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {content.tasks.map((task, i) => (
-            <li key={i} className="flex items-start gap-3 rounded-2xl bg-[#F6F9F8] p-4">
-              <CheckCircle2 size={20} className="mt-0.5 shrink-0" style={{ color: "#3F59CE" }} />
-              <span className="text-sm leading-relaxed" style={{ color: "#17221F" }}>
+            <div
+              key={i}
+              className="flex items-start gap-3 rounded-2xl border p-4"
+              style={{
+                backgroundColor: "var(--color-section)",
+                borderColor: "var(--color-border)",
+              }}
+            >
+              <Check
+                size={20}
+                className="mt-0.5 shrink-0"
+                style={{ color: "var(--color-accent)" }}
+              />
+              <span
+                className="text-sm leading-relaxed"
+                style={{ color: "var(--color-text-dark)" }}
+              >
                 {task}
               </span>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );
@@ -219,28 +278,64 @@ function WhatIncluded() {
 
 function ForWhom() {
   return (
-    <section className="px-6 py-20 md:px-12" style={{ backgroundColor: "#F6F9F8" }}>
+    <section
+      className="px-6 py-24 md:px-12"
+      style={{ backgroundColor: "var(--color-section)" }}
+    >
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl" style={{ color: "#17221F" }}>
-          Hvem er{" "}
-          <em className="font-serif italic font-medium">hovedrengøring</em> til?
-        </h2>
+        <div className="max-w-2xl">
+          <div
+            className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
+            style={{
+              borderColor: "var(--color-border)",
+              color: "var(--color-text-dark)",
+              backgroundColor: "var(--color-card)",
+            }}
+          >
+            <span
+              className="h-2 w-2 rounded-full"
+              style={{ backgroundColor: "var(--color-accent)" }}
+            />
+            For hvem
+          </div>
+
+          <h2
+            className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
+            style={{ color: "var(--color-text-dark)" }}
+          >
+            Hvem er{" "}
+            <em className="font-serif italic font-medium">hovedrengøring</em> til?
+          </h2>
+        </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {content.forWhom.map((item, i) => {
             const Icon = item.icon;
             return (
-              <div key={i} className="rounded-3xl bg-white p-7 shadow-sm">
+              <div
+                key={i}
+                className="rounded-3xl border p-7"
+                style={{
+                  backgroundColor: "var(--color-card)",
+                  borderColor: "var(--color-border)",
+                }}
+              >
                 <div
-                  className="flex h-12 w-12 items-center justify-center rounded-full"
-                  style={{ backgroundColor: "#3F59CE1A" }}
+                  className="flex h-12 w-12 items-center justify-center rounded-2xl"
+                  style={{ backgroundColor: "var(--color-section)" }}
                 >
-                  <Icon size={22} style={{ color: "#3F59CE" }} />
+                  <Icon size={22} style={{ color: "var(--color-accent)" }} />
                 </div>
-                <h3 className="mt-5 text-lg font-bold" style={{ color: "#17221F" }}>
+                <h3
+                  className="mt-5 text-lg font-bold"
+                  style={{ color: "var(--color-text-dark)" }}
+                >
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#617078" }}>
+                <p
+                  className="mt-2 text-sm leading-relaxed"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
                   {item.text}
                 </p>
               </div>
@@ -258,12 +353,35 @@ function ForWhom() {
 
 function ProcessSteps() {
   return (
-    <section className="px-6 py-20 md:px-12" style={{ backgroundColor: "#FFFFFF" }}>
+    <section
+      className="px-6 py-24 md:px-12"
+      style={{ backgroundColor: "var(--color-background)" }}
+    >
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl" style={{ color: "#17221F" }}>
-          Sådan{" "}
-          <em className="font-serif italic font-medium">foregår det</em>
-        </h2>
+        <div className="max-w-2xl">
+          <div
+            className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
+            style={{
+              borderColor: "var(--color-border)",
+              color: "var(--color-text-dark)",
+              backgroundColor: "var(--color-card)",
+            }}
+          >
+            <span
+              className="h-2 w-2 rounded-full"
+              style={{ backgroundColor: "var(--color-accent)" }}
+            />
+            Sådan foregår det
+          </div>
+
+          <h2
+            className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
+            style={{ color: "var(--color-text-dark)" }}
+          >
+            Sådan{" "}
+            <em className="font-serif italic font-medium">foregår det</em>
+          </h2>
+        </div>
 
         <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {content.steps.map((step, i) => {
@@ -272,15 +390,21 @@ function ProcessSteps() {
               <div key={i} className="relative">
                 <div
                   className="flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold text-white"
-                  style={{ backgroundColor: "#3F59CE" }}
+                  style={{ backgroundColor: "var(--color-accent)" }}
                 >
                   {i + 1}
                 </div>
-                <Icon size={20} className="mt-4" style={{ color: "#3F59CE" }} />
-                <h3 className="mt-3 text-base font-bold" style={{ color: "#17221F" }}>
+                <Icon size={20} className="mt-4" style={{ color: "var(--color-accent)" }} />
+                <h3
+                  className="mt-3 text-base font-bold"
+                  style={{ color: "var(--color-text-dark)" }}
+                >
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#617078" }}>
+                <p
+                  className="mt-2 text-sm leading-relaxed"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
                   {step.text}
                 </p>
               </div>
@@ -298,48 +422,85 @@ function ProcessSteps() {
 
 function Pricing() {
   return (
-    <section className="px-6 py-20 md:px-12" style={{ backgroundColor: "#F6F9F8" }}>
+    <section
+      className="px-6 py-24 md:px-12"
+      style={{ backgroundColor: "var(--color-section)" }}
+    >
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div>
-          <h2 className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl" style={{ color: "#17221F" }}>
+          <div
+            className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
+            style={{
+              borderColor: "var(--color-border)",
+              color: "var(--color-text-dark)",
+              backgroundColor: "var(--color-card)",
+            }}
+          >
+            <span
+              className="h-2 w-2 rounded-full"
+              style={{ backgroundColor: "var(--color-accent)" }}
+            />
+            Priser
+          </div>
+
+          <h2
+            className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
+            style={{ color: "var(--color-text-dark)" }}
+          >
             Hvad{" "}
             <em className="font-serif italic font-medium">koster</em> det?
           </h2>
-          <p className="mt-4 max-w-lg text-base leading-relaxed" style={{ color: "#617078" }}>
+          <p className="mt-4 max-w-lg text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
             Vi tror på gennemsigtige priser uden overraskelser. Du får altid et fast tilbud, før vi går i
             gang — baseret på følgende faktorer:
           </p>
 
           <ul className="mt-6 space-y-3">
             {content.pricing.factors.map((factor, i) => (
-              <li key={i} className="flex items-center gap-3 text-sm" style={{ color: "#17221F" }}>
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: "#3F59CE" }} />
+              <li key={i} className="flex items-center gap-3 text-sm" style={{ color: "var(--color-text-dark)" }}>
+                <span
+                  className="h-1.5 w-1.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: "var(--color-accent)" }}
+                />
                 {factor}
               </li>
             ))}
           </ul>
+
+          <a
+            href="/#kontakt"
+            className="group mt-8 inline-flex items-center gap-3 rounded-full py-1.5 pl-6 pr-1.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-accent)]"
+            style={{ backgroundColor: "var(--color-dark)" }}
+          >
+            Få et gratis tilbud
+            <span
+              className="flex h-9 w-9 items-center justify-center rounded-full transition-colors group-hover:bg-white/20"
+              style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
+            >
+              <ArrowUpRight size={16} color="#ffffff" />
+            </span>
+          </a>
         </div>
 
-        <div className="rounded-3xl bg-white p-8 text-center shadow-sm sm:p-10">
-          <p className="text-sm font-medium uppercase tracking-wide" style={{ color: "#617078" }}>
+        <div
+          className="rounded-3xl border p-8 text-center md:p-10"
+          style={{ backgroundColor: "var(--color-card)", borderColor: "var(--color-border)" }}
+        >
+          <p
+            className="text-sm font-medium uppercase tracking-wide"
+            style={{ color: "var(--color-text-muted)" }}
+          >
             Priser fra
           </p>
-          <p className="mt-2 text-5xl font-extrabold" style={{ color: "#17221F" }}>
+          <p className="mt-2 text-5xl font-extrabold" style={{ color: "var(--color-text-dark)" }}>
             {content.pricing.fromPrice} kr.
-            <span className="ml-1 text-base font-medium" style={{ color: "#617078" }}>
+            <span className="ml-1 text-base font-medium" style={{ color: "var(--color-text-muted)" }}>
               /{content.pricing.unit}
             </span>
           </p>
-          <a
-            href="#kontakt"
-            className="group mt-7 inline-flex items-center gap-2 rounded-full py-2.5 pl-6 pr-2 text-sm font-semibold text-white transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#3F59CE]/25"
-            style={{ backgroundColor: "#3F59CE" }}
-          >
-            Få et gratis tilbud
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 transition-all duration-300 ease-out group-hover:bg-white/30 group-hover:rotate-12">
-              <ArrowUpRight size={14} />
-            </span>
-          </a>
+          <p className="mt-4 text-sm leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
+            Fast pris per gang — ingen skjulte gebyrer
+          </p>
         </div>
       </div>
     </section>
@@ -354,40 +515,69 @@ function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="px-6 py-20 md:px-12" style={{ backgroundColor: "#FFFFFF" }}>
+    <section
+      className="px-6 py-24 sm:px-10 md:px-12"
+      style={{ backgroundColor: "var(--color-background)" }}
+    >
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl" style={{ color: "#17221F" }}>
+        <h2
+          className="text-center text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl"
+          style={{ color: "var(--color-text-dark)" }}
+        >
           Ofte stillede{" "}
           <em className="font-serif italic font-medium">spørgsmål</em>
         </h2>
 
-        <div className="mt-10 divide-y" style={{ borderColor: "#E5EAE8" }}>
-          {content.faq.map((item, i) => {
+        <div className="mt-12 flex flex-col gap-3">
+          {content.faq.map((faq, i) => {
             const isOpen = openIndex === i;
+
             return (
-              <div key={i} className="py-5">
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 text-left"
-                  aria-expanded={isOpen}
-                >
-                  <span className="text-base font-semibold" style={{ color: "#17221F" }}>
-                    {item.q}
-                  </span>
-                  <ChevronDown
-                    size={20}
-                    className="shrink-0 transition-transform duration-300"
+              <div
+                key={faq.q}
+                className="cursor-pointer rounded-3xl p-6 transition-colors sm:p-7"
+                style={{ backgroundColor: "var(--color-section)" }}
+                onClick={() => setOpenIndex(isOpen ? null : i)}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <h3
+                    className="text-base font-bold sm:text-lg"
+                    style={{ color: "var(--color-text-dark)" }}
+                  >
+                    {faq.q}
+                  </h3>
+
+                  <span
+                    className="grid size-9 shrink-0 place-items-center rounded-full transition-colors"
                     style={{
-                      color: "#3F59CE",
-                      transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                      backgroundColor: isOpen
+                        ? "var(--color-dark)"
+                        : "var(--color-card)",
                     }}
-                  />
-                </button>
-                {isOpen && (
-                  <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: "#617078" }}>
-                    {item.a}
-                  </p>
-                )}
+                  >
+                    {isOpen ? (
+                      <ChevronDown size={16} style={{ color: "var(--color-accent)" }} className="rotate-180" />
+                    ) : (
+                      <ChevronDown size={16} style={{ color: "var(--color-text-dark)" }} />
+                    )}
+                  </span>
+                </div>
+
+                <div
+                  className="grid transition-all duration-300 ease-in-out"
+                  style={{
+                    gridTemplateRows: isOpen ? "1fr" : "0fr",
+                  }}
+                >
+                  <div className="overflow-hidden">
+                    <p
+                      className="pt-4 text-sm leading-relaxed"
+                      style={{ color: "var(--color-text-muted)" }}
+                    >
+                      {faq.a}
+                    </p>
+                  </div>
+                </div>
               </div>
             );
           })}
@@ -398,12 +588,16 @@ function FAQ() {
 }
 
 /* ------------------------------------------------------------------ */
-/*  7. CTA FORM                                                        */
+/*  7. CTA                                                             */
 /* ------------------------------------------------------------------ */
 
-function CTAForm() {
+function CTA() {
   return (
-    <section id="kontakt" className="px-6 py-20 md:px-12" style={{ backgroundColor: "#17221F" }}>
+    <section
+      id="kontakt"
+      className="px-6 py-24 md:px-12"
+      style={{ backgroundColor: "var(--color-dark)" }}
+    >
       <div className="mx-auto max-w-3xl text-center text-white">
         <h2 className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">
           Klar til en{" "}
@@ -412,18 +606,20 @@ function CTAForm() {
         <p className="mt-4 text-white/70">
           Udfyld formularen, så vender vi tilbage med et uforpligtende tilbud inden for 24 timer.
         </p>
-      </div>
 
-      {/*
-        Indsæt jeres eksisterende bestillingsformular her, fx:
-        <OrderForm serviceType="Hovedrengøring" />
-        Wrapperen nedenfor giver den samme kort-stil som resten af siden.
-      */}
-      <div className="mx-auto mt-10 max-w-xl rounded-3xl bg-white p-8 shadow-sm sm:p-10">
-        {/* <OrderForm serviceType="Hovedrengøring" /> */}
-        <p className="text-center text-sm" style={{ color: "#617078" }}>
-          [ Her indsættes den fælles bestillingsformular ]
-        </p>
+        <a
+          href="/#kontakt"
+          className="group mt-8 inline-flex items-center gap-3 rounded-full py-1.5 pl-6 pr-1.5 text-sm font-semibold transition-colors hover:bg-[var(--color-accent)]"
+          style={{ backgroundColor: "var(--color-accent)", color: "var(--color-dark)" }}
+        >
+          Bestil hovedrengøring
+          <span
+            className="flex h-9 w-9 items-center justify-center rounded-full transition-colors"
+            style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
+          >
+            <ArrowUpRight size={16} color="#ffffff" />
+          </span>
+        </a>
       </div>
     </section>
   );
@@ -436,13 +632,13 @@ function CTAForm() {
 export default function HovedrengoringPage() {
   return (
     <main>
-      <ServiceHero />
+      <HovedrengoringHero />
       <WhatIncluded />
       <ForWhom />
       <ProcessSteps />
       <Pricing />
       <FAQ />
-      <CTAForm />
+      <CTA />
     </main>
   );
 }

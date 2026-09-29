@@ -1,20 +1,19 @@
 @import "tailwindcss";
- 
 
 @theme {
   /* Brand */
   --color-primary: #3F59CE;
   --color-primary-hover: #344CB3;
-  --color-accent: #D6FF3F;
+  --color-accent: #3F59CE;
   --color-accent-hover: #C5ED2E;
 
   /* Backgrounds */
-  --color-background: #fcfcfc;
+  --color-background: #F6F9F8;
   --color-section: #F6F9F8;
   --color-card: #FFFFFF;
 
   /* Text */
-  --color-text-dark: #17221F;
+  --color-text-dark: #14181A;
   --color-text-muted: #617078;
   --color-dark: #14181A;
 
@@ -22,46 +21,37 @@
   --color-border: #E5E7E6;
 }
 
-
 body {
-  color: #E8F8F3;
-  background: #17221F;
-  font-family: Inter, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text-dark);
+  font-family: 'sfPro', Inter, sans-serif;
+  line-height: 1.6;
 }
-
 
 input::placeholder {
   color: rgb(90, 90, 90);
   opacity: 1;
 }
 
-a{
+a {
   transition: 0.3s;
 }
-a:hover{
+a:hover {
   scale: 0.998;
   cursor: pointer;
 }
-button{
+button {
   transition: 0.3s;
 }
-button:hover{
+button:hover {
   scale: 0.998;
   cursor: pointer;
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
- }
 
 .container {
   max-width: 1300px;
   margin: 0 auto;
   padding: 2rem;
   font-family: 'sfPro';
-   line-height: 1.6;
-   
+  line-height: 1.6;
 }
-
- /* #1C62D9 */

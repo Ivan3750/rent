@@ -39,9 +39,10 @@ export default function FAQ() {
 
   return (
     <section
-      className="px-6 py-24 sm:px-10 md:px-12 container"
+      className="px-6 py-24 sm:px-10 md:px-12"
+      style={{ backgroundColor: "var(--color-background)" }}
     >
-      <div className="mx-auto ">
+      <div className="mx-auto max-w-3xl">
         <h2
           className="text-center text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl"
           style={{ color: "var(--color-text-dark)" }}

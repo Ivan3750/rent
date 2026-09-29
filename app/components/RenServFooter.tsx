@@ -68,48 +68,21 @@ export default function RenServFooter() {
           RenServ
         </h2>
       </div>
-
-      {/* Social Links */}
-      <div className="relative z-10 border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8 px-5 py-6 sm:px-8 md:px-12">
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
-          >
-            <AtSign size={16} />
-            Twitter
-          </a>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
-          >
-            <Globe size={16} />
-            Facebook
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
-          >
-            <Link size={16} />
-            LinkedIn
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
-          >
-            <Camera size={16} />
-            Instagram
-          </a>
-        </div>
-      </div>
-    </footer>
+{/* Footer credit */}
+<div className="relative z-10 border-t border-white/10 px-5 py-6">
+  <div className="mx-auto flex max-w-7xl items-center justify-center text-sm text-white/40">
+    <span>
+      Lavet af{" "}
+      <a
+        href="https://webhjerte.dk"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium text-white/60 transition-colors hover:text-white"
+      >
+        WebHjerte
+      </a>
+    </span>
+  </div>
+</div>   </footer>
   );
 }

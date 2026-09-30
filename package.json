@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "postbuild": "next-sitemap",
+      "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "lucide-react": "^1.39.0",

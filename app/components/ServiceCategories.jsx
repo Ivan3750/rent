@@ -68,7 +68,7 @@ export default function ServiceCategories() {
       style={{ backgroundColor: "var(--color-background)" }}
     >
       <div className="mx-auto max-w-6xl">
-        {/* Header */}
+
         <div className="mx-auto max-w-xl text-center">
           <div
             className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
@@ -92,7 +92,7 @@ export default function ServiceCategories() {
           </h2>
         </div>
 
-        {/* Rows */}
+
         <div className="mt-16 flex flex-col gap-6">
           {categories.map(({ slug, title, desc, tags, image }, i) => {
             const imageFirst = i % 2 === 0;

@@ -1,7 +1,7 @@
-const Vikar = () => {
+const Terms = () => {
   return (
     <>
-      <section className="translations-content-container bg-white text-[#]">
+      <section className="translations-content-container bg-white">
         <div className="container">
           <div
             className="tab-content translations-content-item en visible text w-full "
@@ -197,4 +197,4 @@ const Vikar = () => {
   );
 };
 
-export default Vikar;
+export default Terms;

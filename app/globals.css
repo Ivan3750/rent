@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand */
+
   --color-primary: #3F59CE;
   --color-primary-hover: #344CB3;
   --color-accent: #3F59CE;
   --color-accent-hover: #C5ED2E;
 
-  /* Backgrounds */
+
   --color-background: #F6F9F8;
   --color-section: #F6F9F8;
   --color-card: #FFFFFF;
 
-  /* Text */
+
   --color-text-dark: #14181A;
   --color-text-muted: #617078;
   --color-dark: #14181A;
 
-  /* UI */
+
   --color-border: #E5E7E6;
 }
 

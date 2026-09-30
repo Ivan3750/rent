@@ -17,9 +17,7 @@ import { Header } from "../../components/Header";
 import WhatsIncluded from "./_components/WhatsIncluded";
 import aboutImage from "../../assets/about.jpg";
 
-/* ------------------------------------------------------------------ */
-/*  INDHOLD                                                            */
-/* ------------------------------------------------------------------ */
+
 
 const content = {
   breadcrumbs: [{ label: "Forside", href: "/" }, { label: "Rengøring af hjem" }],
@@ -103,9 +101,7 @@ const content = {
   ],
 };
 
-/* ------------------------------------------------------------------ */
-/*  1. HERO                                                            */
-/* ------------------------------------------------------------------ */
+
 
 function ServiceHero() {
   return (
@@ -168,9 +164,7 @@ function ServiceHero() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  2. FOR HVEM                                                        */
-/* ------------------------------------------------------------------ */
+
 
 function ForWhom() {
   return (
@@ -227,9 +221,7 @@ function ForWhom() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  3. SÅDAN FOREGÅR DET                                               */
-/* ------------------------------------------------------------------ */
+
 
 function ProcessSteps() {
   return (
@@ -270,9 +262,7 @@ function ProcessSteps() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  4. PRIS                                                            */
-/* ------------------------------------------------------------------ */
+
 
 function Pricing() {
   return (
@@ -343,15 +333,13 @@ function Pricing() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  5. IMAGE + STAT                                                    */
-/* ------------------------------------------------------------------ */
+
 
 function ImageStat() {
   return (
     <section className="px-6 py-24 md:px-12" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-2">
-        {/* Left: text */}
+
         <div className="max-w-xl">
           <div
             className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
@@ -396,7 +384,7 @@ function ImageStat() {
           </ul>
         </div>
 
-        {/* Right: image + stat */}
+
         <div className="relative mx-auto w-full max-w-md">
           <img
             src={aboutImage.src}
@@ -426,9 +414,7 @@ function ImageStat() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  6. FAQ                                                             */
-/* ------------------------------------------------------------------ */
+
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -480,9 +466,7 @@ function FAQ() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  7. CTA                                                             */
-/* ------------------------------------------------------------------ */
+
 
 function CTA() {
   return (
@@ -518,9 +502,7 @@ function CTA() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  SAMLET SIDE                                                        */
-/* ------------------------------------------------------------------ */
+
 
 export default function RengoringAfHjemPage() {
   return (

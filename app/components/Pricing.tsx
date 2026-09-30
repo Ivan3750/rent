@@ -64,7 +64,7 @@ export default function Pricing() {
       style={{ backgroundColor: "var(--color-background)" }}
     >
       <div className="mx-auto max-w-6xl">
-        {/* Header */}
+
         <div className="mx-auto max-w-xl text-center">
           <div
             className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
@@ -89,7 +89,7 @@ export default function Pricing() {
           </h2>
         </div>
 
-        {/* 4 main plans */}
+
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {plans.map(({ name, desc, price, unit, priceLabel, features, highlighted }) => (
             <div
@@ -201,7 +201,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* 5th plan — custom quote, full width */}
+
         <div
           className="mt-5 flex flex-col items-start justify-between gap-6 rounded-3xl border p-8 sm:flex-row sm:items-center"
           style={{

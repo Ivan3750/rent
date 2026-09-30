@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.renserv.dk</loc><lastmod>2026-09-10T20:09:59.637Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://webhjerte.dk</loc><changefreq>weekly</changefreq><priority>1</priority></url>
+<url><loc>https://webhjerte.dk/flytterengoring</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://webhjerte.dk/hjemrengoring</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://webhjerte.dk/hovedrengoring</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://webhjerte.dk/kontorrengoring</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://webhjerte.dk/om-os</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://webhjerte.dk/priser</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://webhjerte.dk/privacy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://webhjerte.dk/rengoring-af-hjem</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://webhjerte.dk/terms</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

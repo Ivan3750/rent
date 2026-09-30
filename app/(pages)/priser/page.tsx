@@ -98,9 +98,7 @@ function PricingHero() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  2. PRICING PLANS                                                   */
-/* ------------------------------------------------------------------ */
+
 
 function PricingPlans() {
   return (
@@ -268,7 +266,7 @@ function PricingPlans() {
           })}
         </div>
 
-        {/* Custom quote */}
+
         <div
           className="mt-5 flex flex-col items-start justify-between gap-6 rounded-3xl border p-8 sm:flex-row sm:items-center"
           style={{
@@ -316,9 +314,7 @@ function PricingPlans() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  3. WHY US                                                          */
-/* ------------------------------------------------------------------ */
+
 
 function WhyUs() {
   const reasons = [

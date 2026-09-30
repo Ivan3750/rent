@@ -52,26 +52,7 @@ export default function Hero() {
                 </span>
               </a>
 
-              {/*  <div className="flex items-center gap-2">
-                <div
-                  className="flex gap-0.5"
-                  style={{ color: "var(--color-accent)" }}
-                  aria-label="5 stjerner"
-                >
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="currentColor"
-                      strokeWidth={0}
-                    />
-                  ))}
-                </div>
 
-                <span className="text-sm font-medium text-white/85">
-                  1.200+ verificerede anmeldelser
-                </span>
-              </div> */}
             </div>
           </div>
         </div>

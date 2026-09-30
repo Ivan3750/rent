@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import RenServFooter from "./components/RenServFooter";
+import Footer from "./components/Footer";
 
 const sfPro = localFont({
   src: [
@@ -108,7 +108,7 @@ export default function RootLayout({
     <html lang="da" className={`${sfPro.variable} antialiased`}>
       <body className="min-h-screen flex flex-col">
         {children}
-        <RenServFooter></RenServFooter>
+        <Footer></Footer>
         </body>
     </html>
   );

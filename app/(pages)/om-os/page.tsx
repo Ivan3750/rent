@@ -107,9 +107,7 @@ const content = {
   ],
 };
 
-/* ------------------------------------------------------------------ */
-/*  1. HERO                                                            */
-/* ------------------------------------------------------------------ */
+
 
 function AboutHero() {
   return (
@@ -183,9 +181,7 @@ function AboutHero() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  2. HISTORIE (креативна секція з великим текстом)                  */
-/* ------------------------------------------------------------------ */
+
 
 function Story() {
   return (
@@ -195,7 +191,7 @@ function Story() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-          {/* Left: sticky image */}
+
           <div className="relative">
             <div className="sticky top-28">
               <div className="relative mx-auto w-full max-w-md">
@@ -210,7 +206,7 @@ function Story() {
                   className="absolute -bottom-8 -left-8 h-32 w-32 rounded-2xl border-4 object-cover md:h-40 md:w-40"
                   style={{ borderColor: "var(--color-background)" }}
                 />
-                {/* Floating badge */}
+
                 <div
                   className="absolute -right-4 top-6 rounded-2xl px-4 py-3 md:-right-6"
                   style={{ backgroundColor: "var(--color-dark)" }}
@@ -222,7 +218,7 @@ function Story() {
             </div>
           </div>
 
-          {/* Right: text content */}
+
           <div className="max-w-xl">
             <div
               className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
@@ -308,9 +304,7 @@ function Story() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  3. VÆRDIER (горизонтальний скрол)                                  */
-/* ------------------------------------------------------------------ */
+
 
 function Values() {
   return (
@@ -388,9 +382,7 @@ function Values() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  4. STATS (великі цифри на темному фоні)                            */
-/* ------------------------------------------------------------------ */
+
 
 function Stats() {
   return (
@@ -417,9 +409,7 @@ function Stats() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  5. HVORFOR OS (великі картки з номерованими пунктами)              */
-/* ------------------------------------------------------------------ */
+
 
 function WhyUs() {
   return (
@@ -465,7 +455,7 @@ function WhyUs() {
                   borderColor: "var(--color-border)",
                 }}
               >
-                {/* Big number background */}
+
                 <span
                   className="absolute -right-2 -top-4 text-8xl font-extrabold opacity-5"
                   style={{ color: "var(--color-text-dark)" }}
@@ -500,9 +490,7 @@ function WhyUs() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  6. FAQ (стиль з головної сторінки)                                 */
-/* ------------------------------------------------------------------ */
+
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -580,9 +568,7 @@ function FAQ() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  7. CTA                                                             */
-/* ------------------------------------------------------------------ */
+
 
 function CTA() {
   return (
@@ -618,9 +604,7 @@ function CTA() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  SAMLET SIDE                                                        */
-/* ------------------------------------------------------------------ */
+
 
 export default function OmOsPage() {
   return (

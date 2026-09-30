@@ -1,9 +1,11 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
 
 # Host
-Host: https://www.renserv.dk
+Host: https://webhjerte.dk
 
 # Sitemaps
-Sitemap: https://www.renserv.dk/sitemap.xml
+Sitemap: https://webhjerte.dk/sitemap.xml

@@ -1,7 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
 import aboutImage from "../assets/about.jpg";
-/* import aboutImageSmall from "../assets/about-small.jpg";
- */
 function About() {
   return (
     <section

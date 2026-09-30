@@ -156,9 +156,7 @@ const content = {
   ],
 };
 
-/* ------------------------------------------------------------------ */
-/*  1. HERO                                                            */
-/* ------------------------------------------------------------------ */
+
 
 function KontorrengoringHero() {
   return (
@@ -232,9 +230,7 @@ function KontorrengoringHero() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  2. FEATURED SERVICES                                               */
-/* ------------------------------------------------------------------ */
+
 
 function FeaturedServices() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -246,7 +242,7 @@ function FeaturedServices() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          {/* Left: image */}
+
           <div className="relative">
             <img
               src={aboutImage.src}
@@ -255,7 +251,7 @@ function FeaturedServices() {
             />
           </div>
 
-          {/* Right: services list */}
+
           <div>
             <div
               className="mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
@@ -331,9 +327,7 @@ function FeaturedServices() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  3. ABOUT                                                           */
-/* ------------------------------------------------------------------ */
+
 
 function About() {
   return (
@@ -368,7 +362,7 @@ function About() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          {/* Left: image */}
+
           <div className="relative">
             <img
               src={aboutImage.src}
@@ -377,7 +371,7 @@ function About() {
             />
           </div>
 
-          {/* Right: text */}
+
           <div>
             <div
               className="space-y-4 text-base leading-relaxed"
@@ -434,9 +428,7 @@ function About() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  4. PROCESS                                                         */
-/* ------------------------------------------------------------------ */
+
 
 function Process() {
   return (
@@ -522,7 +514,7 @@ function Process() {
             </div>
           ))}
 
-          {/* CTA Card */}
+
           <div
             className="flex flex-col rounded-3xl border p-6"
             style={{
@@ -575,9 +567,7 @@ function Process() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  5. FAQ                                                             */
-/* ------------------------------------------------------------------ */
+
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -655,9 +645,7 @@ function FAQ() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  7. CTA                                                             */
-/* ------------------------------------------------------------------ */
+
 
 function CTA() {
   return (
@@ -693,9 +681,7 @@ function CTA() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  SAMLET SIDE                                                        */
-/* ------------------------------------------------------------------ */
+
 
 export default function KontorrengoringPage() {
   return (

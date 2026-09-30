@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, Clock, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Clock, MapPin, ArrowUpRight } from "lucide-react";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
@@ -52,7 +52,7 @@ export default function ContactSection() {
             className="text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
             style={{ color: "var(--color-text-dark)" }}
           >
-            Kontakt os - {/*  */}
+            Kontakt os -
             <em className="font-serif italic font-medium">vi svarer hurtigt</em>
           </h2>
 
@@ -63,20 +63,7 @@ export default function ContactSection() {
           </p>
 
           <div className="mt-8 space-y-5">
-{/*             <a href="tel:+4522858880" className="flex items-center gap-4">
-              <span
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                style={{ backgroundColor: "var(--color-section)" }}
-              >
-                <Phone size={19} style={{ color: "#3F59CE" }} />
-              </span>
-              <span>
-                <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>Telefon</p>
-                <p className="text-base font-semibold" style={{ color: "#17221F" }}>
-                  +45 22 85 88 80
-                </p>
-              </span>
-            </a> */}
+
 
             <a href="mailto:kontakt@renserv.dk" className="flex items-center gap-4">
               <span

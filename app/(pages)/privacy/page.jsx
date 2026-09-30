@@ -1,7 +1,7 @@
-const TermsOfUse = () => {
+const PrivacyPolicy = () => {
   return (
     <>
-      <section  className="translations-content-container bg-white text-[#]">
+      <section className="translations-content-container bg-white">
         <div className="container">
           <div
             className="tab-content translations-content-item en visible text w-full "
@@ -563,4 +563,4 @@ const TermsOfUse = () => {
   );
 };
 
-export default TermsOfUse;
+export default PrivacyPolicy;

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 export default {
-  siteUrl: 'https://webhjerte.dk',
+  siteUrl: 'https://renserv.dk',
   generateRobotsTxt: true,
 
   sitemapSize: 5000,
